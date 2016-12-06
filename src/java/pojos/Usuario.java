@@ -69,12 +69,12 @@ public class Usuario {
 
     public Usuario(Integer idusuario, String nombre, String email, String password) {
         this.idusuario = idusuario;
-        this.telefono = nombre;
+        this.telefono = telefono;
         this.email = email;
         this.password = password;
     }
-    public Usuario(String nombre, String email, String password) {
-        this.telefono = nombre;
+    public Usuario(String telefono, String email, String password) {
+        this.telefono = telefono;
         this.email = email;
         this.password = password;
     }

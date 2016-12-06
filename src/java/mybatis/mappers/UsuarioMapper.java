@@ -11,5 +11,5 @@ package mybatis.mappers;
  */
 public interface UsuarioMapper {
         public void login(String email, String password); 
-        public void registroUsuario(String nombre, String email, String password);     
+        public void registroUsuario(String telefono, String email, String password);     
 }
