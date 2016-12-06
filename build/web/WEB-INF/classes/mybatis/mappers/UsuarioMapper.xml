@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"><!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<mapper namespace="Usuario">
+    <insert id="registroUsuario" parameterType="pojos.Usuario">
+        INSERT INTO usuario (idUsuario,CorreoUsuario,UsuarioTelefono,UsuarioPass)
+        VALUES(#{idusuario},#{telefono},#{correo},#{password})
+    </insert>
+    <select id="login" resultType="pojos.Usuario"
+            parameterType="string">
+        SELECT 
+        Usuario.idUsuario,
+        Usuario.UsuarioTelefono,
+        Usuario.CorreoUsuario,
+        Usuario.UsuarioPass
+        FROM Usuario
+        WHERE Usuario.UsuarioCorreo = #{correo} 
+    </select>
+</mapper>
+
