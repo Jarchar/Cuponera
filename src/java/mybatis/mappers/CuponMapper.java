@@ -5,17 +5,20 @@
  */
 package mybatis.mappers;
 
+import java.util.Date;
 import java.util.List;
+import pojos.Cupon;
+import pojos.Mensaje;
 import pojos.Oferta;
 
 /**
  *
  * @author bruno
  */
-public interface OfertaMapper_1 {
-        public List<Oferta> getAllOfertas();
-        public List<Oferta>getOfertasByIdcategoria(Integer id);
-        public List<Oferta>getOfertasByCiudad(Integer id);
+public interface CuponMapper {
+            public List<Cupon> cuponesByIdusuario(Integer idUsuario);
+            public Mensaje generaCupon(Integer idUsuario, Integer idOferta);
+            
 
     
 }

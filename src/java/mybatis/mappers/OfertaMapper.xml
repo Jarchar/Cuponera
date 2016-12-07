@@ -16,11 +16,12 @@ and open the template in the editor.
         Oferta.NombreOferta,
         Oferta.Descripcion,
         Oferta.PrecioOferta,
-        Oferta.idEmpresa,
+        Oferta.Empresa_idEmpresa,
         Oferta.idCategoria           
         FROM Oferta
-        WHERE Oferta.idCategoria = #{id}    
+        WHERE Oferta.Categoria_idCategoria = #{id}    
     </select>
+    
     <select id="getOfertasByCiudad" resultType="pojos.Oferta"
             parameterType="int">
         SELECT 
@@ -28,8 +29,8 @@ and open the template in the editor.
         Oferta.NombreOferta,
         Oferta.Descripcion,
         Oferta.PrecioOferta,
-        Oferta.idEmpresa,
-        Oferta.idCategoria           
+        Oferta.Empresa_idEmpresa,
+        Oferta.Categoria_idCategoria           
         FROM Oferta
         WHERE Oferta.Ciudad_idCiudad = #{id}    
     </select>
@@ -39,8 +40,8 @@ and open the template in the editor.
         Oferta.NombreOferta,
         Oferta.Descripcion,
         Oferta.PrecioOferta,
-        Oferta.idEmpresa,
-        Oferta.idCategoria
+        Oferta.Empresa_idEmpresa,
+        Oferta.Categoria_idCategoria
         FROM Oferta
     </select>
 
