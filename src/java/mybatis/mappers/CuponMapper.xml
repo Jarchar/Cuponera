@@ -13,6 +13,7 @@ and open the template in the editor.
         INSERT INTO Cupon (idUsuario, idOferta,FechaCuponInicio)
         VALUES(#{idUsuario},#{idOferta},#{FechaCuponInicio})
     </insert>
+    
    <select id="cuponesByIdusuario" resultType="pojos.Cupon" 
    parameterType="int" >
         SELECT 
@@ -20,6 +21,8 @@ and open the template in the editor.
         Cupon.idUsuario,
         Cupon.FechaCuponInicio,
         Cupon.Oferta_idOferta
-        FROM Cupon   
+        FROM Cupon  
+        WHERE Cupon.idUsuario = #{idusuario}
+
     </select> 
 </mapper>

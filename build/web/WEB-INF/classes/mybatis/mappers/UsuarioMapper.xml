@@ -8,18 +8,19 @@ and open the template in the editor.
 -->
 <mapper namespace="Usuario">
     <insert id="registroUsuario" parameterType="pojos.Usuario">
-        INSERT INTO usuario (idUsuario,CorreoUsuario,UsuarioTelefono,UsuarioPass)
-        VALUES(#{idusuario},#{telefono},#{correo},#{password})
+        INSERT INTO Usuario (UsuarioTelefono, CorreoUsuario,UsuarioPass)
+        VALUES(#{telefono},#{email},#{password})
     </insert>
-    <select id="login" resultType="pojos.Usuario"
-            parameterType="string">
+    
+    <select id="login" resultType="Object"
+            parameterType="pojos.Usuario">
         SELECT 
         Usuario.idUsuario,
         Usuario.UsuarioTelefono,
         Usuario.CorreoUsuario,
         Usuario.UsuarioPass
         FROM Usuario
-        WHERE Usuario.UsuarioCorreo = #{correo} 
+        WHERE Usuario.UsuarioCorreo = #{usr.email} 
     </select>
 </mapper>
 

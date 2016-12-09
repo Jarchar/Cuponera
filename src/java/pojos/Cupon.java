@@ -5,7 +5,7 @@
  */
 package pojos;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  *
@@ -68,6 +68,7 @@ public class Cupon {
     public void setIdUsuario(Integer idUsuario) {
         this.idUsuario = idUsuario;
     }
+    public Cupon(){}
 
     public Cupon(Integer idOferta, Date fecha, Integer idUsuario) {
         this.idOferta = idOferta;

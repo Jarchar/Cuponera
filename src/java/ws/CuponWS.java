@@ -7,7 +7,7 @@ package ws;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -61,8 +61,8 @@ public class CuponWS {
             @FormParam("idoferta") Integer idoferta
          ){
         Mensaje resultado;
-        DateFormat fecha=new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date fechacreacion= new Date();
+        long time = System.currentTimeMillis();
+        Date fechacreacion = new Date(time);
         Cupon c=new Cupon(idusuario, fechacreacion, idoferta);
         SqlSession conn = MyBatisUtil.getSession();
         try{

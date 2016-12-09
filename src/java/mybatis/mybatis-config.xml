@@ -20,7 +20,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <mapper resource="mybatis/mappers/OfertaMapper.xml"/>
         <mapper resource="mybatis/mappers/UsuarioMapper.xml"/>
         <mapper resource="mybatis/mappers/CuponMapper.xml"/>
-
     </mappers>
 </configuration>
                 

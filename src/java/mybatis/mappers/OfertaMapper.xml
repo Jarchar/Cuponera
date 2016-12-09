@@ -17,7 +17,7 @@ and open the template in the editor.
         Oferta.Descripcion,
         Oferta.PrecioOferta,
         Oferta.Empresa_idEmpresa,
-        Oferta.idCategoria           
+        Oferta.Categoria_idCategoria           
         FROM Oferta
         WHERE Oferta.Categoria_idCategoria = #{id}    
     </select>
